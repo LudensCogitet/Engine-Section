@@ -1,0 +1,183 @@
+<tw-storydata name="Engine Section" startnode="9" creator="Twine" creator-version="2.0.8" ifid="CBB7A98F-46F8-4355-9882-7128E5938811" format="SugarCube" options=""><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">/* twine-user-stylesheet-joiner */
+</style><script role="script" id="twine-user-script" type="text/twine-javascript">/* twine-user-script-joiner */
+version.extensions.timedgotoMacro={major:1,minor:2,revision:0};
+macros["goto"]=macros.timedgoto={timer:null,handler:function(a,b,c,d){function cssTimeUnit(s){if(typeof s=="string"){if(s.slice(-2).toLowerCase()=="ms"){return +(s.slice(0,-2))||0
+}else{if(s.slice(-1).toLowerCase()=="s"){return +(s.slice(0,-1))*1000||0
+}}}throwError(a,s+" isn't a CSS time unit");return 0}var t,d,m,s;
+t=c[c.length-1];d=d.fullArgs();m=0;if(b!="goto"){d=d.slice(0,d.lastIndexOf(t));
+m=cssTimeUnit(t)}d=eval(Wikifier.parse(d));if(d+""&&state&&state.init){if(macros["goto"].timer){clearTimeout(macros["goto"].timer)
+}s=state.history[0].passage.title;macros["goto"].timer=setTimeout(function(){if(state.history[0].passage.title==s){state.display(d,a)
+}},m)}}};</script><tw-passagedata pid="1" name="Start2" tags="" position="175,50">You are floating. Floating in some kind of liquid. 
+
+You can tell because it resists the spasmodic movement of your limbs as a mild electrical current stimulates your muscles. A bright light erupts in front of your closed eyelids, replacing the utter blackness with a luminecent, redish glow.
+
+A soothing voice, very like the bell that came before, informs you of what you are already remembering: 
+
+&lt;html&gt;
+&lt;ls&gt;
+&lt;li&gt;You are awaking from hypersleep.&lt;/li&gt;
+&lt;li&gt;You are Chief Engineer Rhineholt.&lt;/li&gt;
+&lt;li&gt;When you are decanted, you will be very cold, very dizzy, and you will probably throw up.&lt;/li&gt;
+&lt;/ls&gt;
+&lt;/html&gt;
+
+[[--Throw up--|Start3]]</tw-passagedata><tw-passagedata pid="2" name="Start3" tags="" position="300,50">The glass doors to the sleeping tube slide open with a hiss, you stumble out, and vomit.
+
+It is horrible. But, you recognize the necessity, as the synthetic stomach acids pumped into a subject before hypersleep are closer to embalming fluid than any wholesome thing the stomach should contain. Lucky there's a drain in the floor.
+
+"Oh, and a cold shower. Good," you think sarcasticly (a sign of full consciousness returning) as jets of water spray you suddenly from all sides.
+
+[[--"If that's the current mission time, why the hell'd the ship wake me up?"--|Start4]]</tw-passagedata><tw-passagedata pid="3" name="open the control panel" tags="" position="925,300">&lt;&lt;if $panelFixed is false&gt;&gt;You unscrew the top panel and put in carefully aside.
+
+Right away you notice a quantic phase transceiver has come disconnected. Must have happened during the bumpy ride through the nebula (though it must not have been connected very well in the first place to fall out like that).
+
+You push it back into place, and hear that satisfying *click*.&lt;&lt;set $panelFixed to true&gt;&gt;&lt;&lt;else&gt;&gt;Looks like an incomprehensible mess. Everything seems to be fine.&lt;&lt;endif&gt;&gt;
+
+[[--Back--|control panel]]</tw-passagedata><tw-passagedata pid="4" name="Start1" tags="" position="175,175">&lt;&lt;silently&gt;&gt;
+&lt;&lt;set $hatchesClosed to true&gt;&gt;
+&lt;&lt;set $haveScrewdriver to false&gt;&gt;
+&lt;&lt;set $haveSpacesuit to false&gt;&gt;
+&lt;&lt;set $panelFixed to false&gt;&gt;
+&lt;&lt;set $havePatches to false&gt;&gt;
+&lt;&lt;set $lookedStatus to false&gt;&gt;
+&lt;&lt;set $numProblems to 3&gt;&gt;
+&lt;&lt;set $hullBreached to true&gt;&gt;
+&lt;&lt;set $quantumFieldCollapsed to false&gt;&gt;
+&lt;&lt;set $coolantWorking to false&gt;&gt;
+&lt;&lt;endsilently&gt;&gt;The sound of a gentle bell echos through the abyss.
+/% did this work? %/
+[[--Wait--|Start2]]</tw-passagedata><tw-passagedata pid="5" name="Start6" tags="" position="675,50">&lt;&lt;Tick&gt;&gt;"We struck something. All aft sensors pertaining to the engine room have been unresponsive. But, the behavior of other parts of the ship are consistent with some kind of cooling problem.
+
+So, I woke you up. I thought you'd be handy."
+
+[[--"Considering I'm the one with hands."--|Control Room]]</tw-passagedata><tw-passagedata pid="6" name="woosh" tags="" position="925,425">A sudden breeze picks up, rising quickly to a gale, as the air rushes to find some breach in the hull. Good thing you're wearing the suit.
+
+[[--Back--|control panel]]</tw-passagedata><tw-passagedata pid="7" name="Start4" tags="" position="425,50">Coordination tests grudgingly taken, stimulants administered, coverall zipped, your brow furrows as you read the mission clock's glowing red display. It's six months too early to wake up.
+
+Which means there's a problem. 
+
+Which means everyone else is still asleep, because you're the one the ship wakes when there's a problem she can't fix herself. Poor girl, smart for what she is, but she's no rational animal; no union of soul and body like good old Rhineholt.
+
+You wait for her to chime in, which she promptly does.
+
+"Hello Chief Engineer Rhineholt. You had a pleasant rest I trust?"
+
+[[--"Get on with it already, Minerva."--|Start5][$reply = "\"Cranky after our nap, are we? I woke you because a "]]
+[[--"No rest for us pickles, Minerva."--|Start5][$reply = "A charmingly convincing synthesized chuckle emerges from the overhead speaker. \"Unfortunately I didn't open your jar for a picnic. A "]]
+[[--"Lovely, thank you Minerva."--|Start5][$reply = "\"Pleased to hear it. I'm sorry for waking you. But, a "]]</tw-passagedata><tw-passagedata pid="8" name="Start5" tags="" position="550,50">&lt;&lt;print $reply&gt;&gt;small, undocumented nebula moving at very high speed intercepted our flight path. I was unable to perform evasive maneuvers before coming in contact with the cloud."
+
+[[--"So, what's the problem?"--|Start6]]</tw-passagedata><tw-passagedata pid="9" name="Start" tags="" position="50,50">Selecting a difficulty (this only changes the margin for error)
+
+[[Just Explore|Start0][$time = 10000]]
+
+[[More Forgiving|Start0][$time = 50]]
+
+[[Less Forgiving|Start0][$time = 40]]</tw-passagedata><tw-passagedata pid="10" name="status screen" tags="Room" position="550,300">&lt;&lt;Tick&gt;&gt;&lt;&lt;if $panelFixed is false&gt;&gt;Usually you'd be seeing the status of every part of the Engine Section and it's systems but, as Minerva said, something seems to be wrong with the sensors. The screen is dark.&lt;&lt;else&gt;&gt;The entire Engine Section glimmers on the screen in electric blue on black.&lt;&lt;if $lookedPanel is false&gt;&gt;&lt;&lt;set $lookedPanel to true&gt;&gt; Looks like the sensors themselves were fine.
+
+You brush aside your annoyance at the lack of redundant wiring for the sensors (even Minerva's awareness funneled through a single connector under the control panel!?) and turn your attention to the information on the screen.&lt;&lt;endif&gt;&gt;
+
+&lt;&lt;if $numProblems neq 0&gt;&gt;&lt;&lt;print $numProblems&gt;&gt;&lt;&lt;if $numProblems neq 3 &amp;&amp; $numProblems neq 2&gt;&gt; blinking light indicates a problem:&lt;&lt;else&gt;&gt; blinking lights indicate problems:&lt;&lt;endif&gt;&gt;&lt;&lt;endif&gt;&gt;
+&lt;&lt;if $hullBreached is true&gt;&gt;* There is a hull breach in section two of the Engine Tunnels.&lt;&lt;endif&gt;&gt;
+&lt;&lt;if $coolantWorking is false&gt;&gt;* There is indeed a breach in the coolant system. Looks like it's right by the intake in section three of the Engine Tunnels.&lt;&lt;endif&gt;&gt;
+&lt;&lt;if $quantumFieldCollapsed is false&gt;&gt;* Huh. [[TransSubAtPar][$transLast = "status screen"]] circuit 12 is in flux.&lt;&lt;endif&gt;&gt;&lt;&lt;endif&gt;&gt;&lt;&lt;if previous() is "TransSubAtPar"&gt;&gt;
+[[--Back--|Control Room]]&lt;&lt;else&gt;&gt;
+[[--Back--|previous()]]&lt;&lt;endif&gt;&gt;</tw-passagedata><tw-passagedata pid="11" name="_section 2" tags="Handler" position="1675,50">&lt;&lt;WrongInput "section 2"&gt;&gt;</tw-passagedata><tw-passagedata pid="12" name="_section 3" tags="Handler" position="1675,175">&lt;&lt;WrongInput "section 3"&gt;&gt;</tw-passagedata><tw-passagedata pid="13" name="_Engine Tunnels" tags="Handler" position="1550,675">&lt;&lt;if $input is "take a guess"&gt;&gt;&lt;&lt;goto either("section 2","section 3","Engine Tunnels Again","random tunnel","random tunnel","random tunnel")&gt;&gt;&lt;&lt;else&gt;&gt;&lt;&lt;if $input is "harg"&gt;&gt;&lt;&lt;set $hullBreached to false&gt;&gt;&lt;&lt;set $numProblems to $numProblems -1&gt;&gt;You take a sheet of the quantum-activated fabric from you pocket, stretch it to size, and pat it down firmly around the edges of the breach.
+Within moments it pulls itself tight and hardens. If you tap on it, it even sounds like the rest of the hull.
+[[--Back--|section 2]]&lt;&lt;else&gt;&gt;&lt;&lt;if $input is "blarg"&gt;&gt;&lt;&lt;set $coolantWorking to true&gt;&gt;&lt;&lt;set $numProblems to $numProblems -1&gt;&gt;You unfold a patch and smooth it over the hole. immidiatly it hardens and seals itself. Detecting the closer of the system, the emergency cut-off disengadges and coolant begins flowing to the engine again.
+[[--Back--|section 3]]&lt;&lt;else&gt;&gt;&lt;&lt;WrongInput "Engine Tunnels Again"&gt;&gt;&lt;&lt;endif&gt;&gt;&lt;&lt;endif&gt;&gt;&lt;&lt;endif&gt;&gt;</tw-passagedata><tw-passagedata pid="14" name="Vacuum of Space" tags="" position="1050,425">A sudden breeze picks up, rising quickly to a gale, and with a sickening lurch in you stomach you realize the emergency hatches must have closed because of a breach in the hull.
+
+Unfortunately you aren't wearing a space suit. This makes surviving in vacuums probablisticly unlikely and practically impossible. Although, as you're pulled across the floor towards the unseen breach, it occurs to you that the magnetic boots are more immidiatley important than the pressurization or air supply.
+
+It isn't a straight shot to the impromptu ship's exit. You are mercifully unconscious before going too far.
+
+FIN</tw-passagedata><tw-passagedata pid="15" name="Start0" tags="" position="50,175">[[--Start--|Start1]]</tw-passagedata><tw-passagedata pid="16" name="Control Room" tags="Room" position="675,300">&lt;&lt;Tick&gt;&gt;You're standing in the Engine Section's control room.
+
+Before you is the [[control panel]] and the [[status screen]].
+
+Beyond that is the hatchway to the [[Hypersleep pods]]
+
+A storage closet is through the [[door|storage closet]] to your left.
+
+A [[ladder|Heisenberg Shaft]] on your right leads up to the Heisenberg Shaft.
+
+Another [[ladder|Engine Tunnels]] behind you leads down to the Engine Tunnels.
+
+&lt;&lt;TextInput "_Control Room"&gt;&gt;</tw-passagedata><tw-passagedata pid="18" name="_random tunnel" tags="Handler" position="1675,300">&lt;&lt;WrongInput "random tunnel"&gt;&gt;</tw-passagedata><tw-passagedata pid="19" name="Heisenberg Shaft Top" tags="Room" position="800,550">The rows of numbered panels encircle you, a simple push of a button mounted beside each one will open the panel and reveal the circuit contained within.
+&lt;&lt;TextInput "_Heisenberg Shaft Top"&gt;&gt;
+[[--Back--|Heisenberg Shaft]]</tw-passagedata><tw-passagedata pid="20" name="_Heisenberg Shaft" tags="Handler" position="1550,550">&lt;&lt;WrongInput "Heisenberg Shaft"&gt;&gt;</tw-passagedata><tw-passagedata pid="21" name="TransSubAtPar" tags="" position="425,300">You remember the lectures you atteneded at Betelgeuse-4 Colonial VoTec like it was yesterday.
+
+A Probability Field Flux Hyper Drive (hyperbolicly and erroneously referred to as a Chaos Engine) manipulates pre-particle superstates to achieve faster than light travel. The TransSubAtPar (Transitional Sub-Atomic Particle) circuits are the interface between the quantum computers and the macro computers that the human crew use when controlling the ship.
+
+One of the side-effects of using a Chaos Engine is that the area around the engine itself (the Engine Tunnels) are effected by the quantum flux the engine generates, and you can never tell which part of the tunnels will lead to which other parts until you go down their, perceive the tunnels yourself, and collapse the wave-forms.
+
+This, of course, is a huge waste of time and a major annoyance.&lt;&lt;if $lookedPanel is true&gt;&gt; Circuit 12 is one of the circuits that monitors the superstates and displays a handy readout at each tunnel junction, so you don't have to go by trial and error.
+
+The collision with the nebula must have knocked it [[out of whack|wrong]].&lt;&lt;else&gt;&gt; Circuits in the Heisenberg Shaft are supposed to monitor the superstates and show you which way is which down in the tunnels at the moment, but something must be [[wrong]]. You'll have to go fix the problem, or take a damn guess.&lt;&lt;endif&gt;&gt;
+[[--Back--|$transLast]]</tw-passagedata><tw-passagedata pid="22" name="random tunnel" tags="Room" position="925,675">&lt;&lt;Tick&gt;&gt;&lt;&lt;set $randTunnel to either("Four","Five","Nine","Twelve")&gt;&gt;You pick a direction, head down the corridor, round a corner and...
+
+You're in Section &lt;&lt;print $randTunnel&gt;&gt;. It looks pretty much like any other section of the engine tunnels, except for the big "&lt;&lt;print $randTunnel&gt;&gt;" printed on one of the few lengths of wall not covered in wiring and pipes.
+[[--Take a guess--|_Engine Tunnels][$input = "take a guess"]]
+&lt;&lt;TextInput "_random tunnel"&gt;&gt;</tw-passagedata><tw-passagedata pid="23" name="_Heisenberg Shaft Top" tags="Handler" position="1550,425">&lt;&lt;if $input is "panel 12" || $input is "12"&gt;&gt;&lt;&lt;set $quantumFieldCollapsed to true&gt;&gt;&lt;&lt;set $numProblems to $numProblems - 1&gt;&gt;You push the button next to panel 12. Yep, looks like circuitry to you.
+[[--Back--|Heisenberg Shaft Top]]&lt;&lt;else&gt;&gt;&lt;&lt;WrongInput "Heisenberg Shaft Top"&gt;&gt;&lt;&lt;endif&gt;&gt;</tw-passagedata><tw-passagedata pid="24" name="_status screen" tags="Handler" position="1550,300">&lt;&lt;WrongInput "Control Room"&gt;&gt;</tw-passagedata><tw-passagedata pid="25" name="StoryTitle" tags="" position="50,925">Engine Section</tw-passagedata><tw-passagedata pid="26" name="Tick" tags="" position="50,550">&lt;&lt;if $coolantWorking is false&gt;&gt;&lt;&lt;set $time to $time - 1&gt;&gt;&lt;&lt;if $time is 0&gt;&gt;&lt;&lt;goto "Ka-boom"&gt;&gt;&lt;&lt;endif&gt;&gt;&lt;&lt;endif&gt;&gt;</tw-passagedata><tw-passagedata pid="27" name="Engine Tunnels" tags="Room" position="675,675">&lt;&lt;if $hatchesClosed is true&gt;&gt;&lt;&lt;Tick&gt;&gt;The emergency bulkheads have been engadged. You can't get down to the Engine Tunnels.
+&lt;&lt;TextInput "_Engine Tunnels"&gt;&gt;
+[[--Back--|Control Room]]&lt;&lt;else&gt;&gt;You hop off the last rung of the ladder with a *thunk* as your magnitized boots come in contact with the floor.
+The Engine Tunnels stretch out before you and on either side, each tunnel of brightly lit steel wrinkely with wires and pipes.&lt;&lt;display "Engine Tunnels Again"&gt;&gt;&lt;&lt;endif&gt;&gt;</tw-passagedata><tw-passagedata pid="28" name="TextInput" tags="" position="425,925">[[--Other-- | parameter(0)][$input = prompt("","")]]
+</tw-passagedata><tw-passagedata pid="29" name="GetSpacesuit" tags="" position="425,550">&lt;&lt;set $haveSpacesuit to true&gt;&gt;You carefully put on and seal the space suit. Each foot hits the floor with a *thunk* as the magnets engadge to replace the artifical gravity (in case the need arises), and with a hiss, you're breathing a personal supply of oxygen.
+
+[[--Back--|storage closet]]</tw-passagedata><tw-passagedata pid="30" name="Heisenberg Shaft" tags="Room" position="800,425">&lt;&lt;Tick&gt;&gt;&lt;&lt;if $hatchesClosed is true&gt;&gt;&lt;&lt;Tick&gt;&gt;The emergency bulkheads have been engadged. You can't get up to the Heisenberg Shaft.&lt;&lt;else&gt;&gt;The Heisenberg Shaft is a hollow tube 2.5 meters in diameter and 8 meters tall. 
+A dazzling display of colors and shapes play across the smooth, semi translucent wall of the Shaft. The ladder you climbed to get here continues up to the ceiling, where two rows of panels, numbered 1 through 16, are built into wall.
+[[--Climb up--|Heisenberg Shaft Top]]&lt;&lt;endif&gt;&gt;
+&lt;&lt;TextInput "_Heisenberg Shaft"&gt;&gt;
+[[--Back--|Control Room]]</tw-passagedata><tw-passagedata pid="31" name="section 3" tags="Room" position="925,925">&lt;&lt;Tick&gt;&gt;"Section 3" say the white letters painted on the steel wall.&lt;&lt;if $coolantWorking is false&gt;&gt;There's a puddle of iridescent yellow liquid on the floor at your feet; the coolant that leaked before the emergency cut-off sealed the intake pipes. You can see the acorn sized hole in the intake that caused it.&lt;&lt;if $havePatches is true&gt;&gt;
+[[--Use the Auto-Adhering Auto-adaptive All-Purpose Patches to patch the coolant intake pipe--|_Engine Tunnels][$input = "blarg"]]&lt;&lt;endif&gt;&gt;&lt;&lt;endif&gt;&gt;&lt;&lt;if $quantumFieldCollapsed is false&gt;&gt;
+[[--Take a guess--|_Engine Tunnels][$input = "take a guess"]]
+&lt;&lt;else&gt;&gt;
+[[--Head to Section Two|section 2]]
+[[--Head back to the ladder--|Engine Tunnels Again]]&lt;&lt;endif&gt;&gt;
+&lt;&lt;TextInput "_section 3"&gt;&gt;</tw-passagedata><tw-passagedata pid="32" name="wrong" tags="" position="300,300">&lt;&lt;if $lookedPanel is true&gt;&gt;It's&lt;&lt;else&gt;&gt;One of them is&lt;&lt;endif&gt;&gt; probably in a superstate itself now. Lucky all you have to do is go open the correct panel in the Heisenberg Shaft and look at the circuit to collapse the wave-form. Easy Fix.
+[[--Back--|previous()]]</tw-passagedata><tw-passagedata pid="33" name="WrongInput" tags="" position="550,925">"Not sure what I was thinking there..."
+
+[[--Back--|parameter(0)]]</tw-passagedata><tw-passagedata pid="34" name="section 2" tags="Room" position="925,800">&lt;&lt;Tick&gt;&gt;Here you are in Section Two. 
+&lt;&lt;if $hullBreached is true&gt;&gt;Your eyes are drawn to the immensity of deep space with a terrifying immediacy, as a breach in the hull gapes on your right.
+There's nothing there between you and a whole lot of nothing.
+&lt;&lt;if $havePatches is true&gt;&gt;[[--Use the Auto-Adhering Auto-adaptive All-Purpose Patches to patch the hull breach|_Engine Tunnels][$input = "harg"]]&lt;&lt;endif&gt;&gt;&lt;&lt;else&gt;&gt;The patch is holding nicely.&lt;&lt;endif&gt;&gt;
+&lt;&lt;if $quantumFieldCollapsed is false&gt;&gt;[[--Take a guess--|_Engine Tunnels][$input = "take a guess"]]&lt;&lt;else&gt;&gt;[[--Move on to Section Three|section 3]]
+[[--Head back to the ladder--|Engine Tunnels Again]]&lt;&lt;endif&gt;&gt;
+&lt;&lt;TextInput "_section 2"&gt;&gt;</tw-passagedata><tw-passagedata pid="35" name="GetScrewdriver" tags="" position="425,425">You grab the screwdriver.
+
+[[--Back--|storage closet]]</tw-passagedata><tw-passagedata pid="36" name="Hypersleep pods" tags="" position="550,175">&lt;&lt;Tick&gt;&gt;&lt;&lt;if $numProblems is 0&gt;&gt;The ship is ship-shape again, and you can't wait to go back to hypersleep so you can wake up when the food synthesizers are booted up.
+[[Go to Hypersleep|ending][$endingText = "Now for a well earned rest in a giant bottle of saliferous goo kept at body temprature. Maybe, after the ship docks, you'll find another engineer who'll find your war story interesting."]]&lt;&lt;else&gt;&gt;&lt;&lt;if $quantumFieldCollapsed is false &amp;&amp; $numProblems is 1&gt;&gt;Well, the cooling problem seems to be fixed, but their's still something wrong witht he sensors. Eh, you're so damn tired. It will probably be fine, and Minerva will wake you if their's another problem, right?
+[[Go to Hypersleep|ending][$endingText = "You head to the preping chamber for hypersleep. You might get a reprimand at the other end for failing to fix the sensors, but this crate should make it fine. And they won't be able to deny that you kept the ship from blowing up."]]&lt;&lt;else&gt;&gt;Can't go back to sleep yet, 'still got problems to fix. Besides, it would be a short nap. If the Probability Field Flux Hyper Drive isn't being cooled, you estimate you've got something like &lt;&lt;print $time&gt;&gt; minutes before the whole thing explodes, leaving nothing but sub-atomic dust and tachions hurtling through space-time.&lt;&lt;endif&gt;&gt;&lt;&lt;endif&gt;&gt;
+[[--Back--|Control Room]]
+</tw-passagedata><tw-passagedata pid="37" name="ending" tags="" position="425,175">&lt;&lt;print $time&gt;&gt;
+&lt;&lt;print $endingText&gt;&gt;
+
+FIN</tw-passagedata><tw-passagedata pid="38" name="_storage closet" tags="Handler" position="1675,425">&lt;&lt;WrongInput "Control Room"&gt;&gt;</tw-passagedata><tw-passagedata pid="39" name="_control panel" tags="Handler" position="1550,175">&lt;&lt;if $input is "cover" | $input is "panel" | $input is "covers"&gt;&gt;&lt;&lt;if $haveScrewdriver is true&gt;&gt;[[open the control panel]]&lt;&lt;else&gt;&gt;"If I hade a screwdriver, I could open the panel"
+[[--Back--|control panel]]&lt;&lt;endif&gt;&gt;&lt;&lt;else&gt;&gt;&lt;&lt;WrongInput "control panel"&gt;&gt;&lt;&lt;endif&gt;&gt;</tw-passagedata><tw-passagedata pid="40" name="storage closet" tags="Room" position="550,425">&lt;&lt;Tick&gt;&gt;You're standing in the Engine Section' storage closet.
+
+It's really not much to look at, but it's difficult to spend so much time in places like this without feeling a little affection for them. The walls are lined with shelves covered in parts, tools, and doo-dads.
+
+&lt;&lt;if $haveScrewdriver is false&gt;&gt;A [[screwdriver|GetScrewdriver][$haveScrewdriver to true]] lays on a shelf nearby.&lt;&lt;endif&gt;&gt;
+&lt;&lt;if $haveSpacesuit is false&gt;&gt;There's a [[space suit|GetSpacesuit]] hanging in the corner.&lt;&lt;endif&gt;&gt;
+&lt;&lt;if $havePatches is false&gt;&gt;Some [[Auto-Adhering Auto-adaptive All-Purpose Patches|GetPatches][$havePatches to true]] are on the floor against one wall.&lt;&lt;endif&gt;&gt;
+
+[[--Back--|Control Room]]</tw-passagedata><tw-passagedata pid="41" name="_Control Room" tags="Handler" position="1550,50">&lt;&lt;WrongInput "Control Room"&gt;&gt;</tw-passagedata><tw-passagedata pid="42" name="Ka-boom" tags="" position="50,675">You've run out of time. You can hear the distant rumble as the engine's shielding begins to bend and tear in the heat. Then, without another sound you're present to hear, your engineering problems are over.
+
+FIN</tw-passagedata><tw-passagedata pid="43" name="ToggleHatches" tags="" position="800,175">&lt;&lt;if $hatchesClosed is true&gt;&gt;&lt;&lt;set $hatchesClosed to false&gt;&gt;&lt;&lt;if $airInTunnels is false&gt;&gt;&lt;&lt;if $haveSpacesuit is false&gt;&gt;&lt;&lt;goto "Vacuum of Space"&gt;&gt;&lt;&lt;else&gt;&gt;&lt;&lt;goto "woosh"&gt;&gt;&lt;&lt;endif&gt;&gt;&lt;&lt;endif&gt;&gt;&lt;&lt;else&gt;&gt;&lt;&lt;set $hatchesClosed to true&gt;&gt;&lt;&lt;endif&gt;&gt;
+
+[[--Back--|Control Room]]</tw-passagedata><tw-passagedata pid="44" name="control panel" tags="Room" position="800,300">&lt;&lt;Tick&gt;&gt;This panel covers a complex spider's web of circuits and wires, and is covered with a dazzling array of dials, switches, nobs, and a track ball (believe it or not). All of which, as Chief Engineer, you understand completely.
+
+&lt;&lt;if $hatchesClosed is true&gt;&gt;[[--Disengadge Emergency Bulkheads--|ToggleHatches]]&lt;&lt;endif&gt;&gt;
+&lt;&lt;if $hatchesClosed is false&gt;&gt;[[--Engadge Emergency Bulkheads--|ToggleHatches]]&lt;&lt;endif&gt;&gt;
+
+&lt;&lt;TextInput "_control panel"&gt;&gt;
+
+[[--Back--|Control Room]]
+</tw-passagedata><tw-passagedata pid="45" name="GetPatches" tags="" position="550,550">You fold the quantum fabric and put it in your breast pocket.
+
+[[--Back|storage closet]]</tw-passagedata><tw-passagedata pid="46" name="StoryAuthor" tags="" position="175,925">John Hiner III</tw-passagedata><tw-passagedata pid="47" name="Engine Tunnels Again" tags="Room" position="675,800">&lt;&lt;Tick&gt;&gt;Your at the bottom of the ladder back up to the Control Room. &lt;&lt;if $quantumFieldCollapsed is true&gt;&gt;
+From the digital readout on the wall you see that [[section 2]] is straight ahead at the moment. [[Section 3|section 3]] is to the right.&lt;&lt;else&gt;&gt;The digital readouts at each tunnel entrance are dark. This is a [[problem|TransSubAtPar][$transLast ="Engine Tunnels Again"]].
+[[--Take a guess--|_Engine Tunnels][$input = "take a guess"]]&lt;&lt;endif&gt;&gt;
+
+&lt;&lt;TextInput "_Engine Tunnels"&gt;&gt;
+[[--Back up to the Control Room--|Control Room]]</tw-passagedata></tw-storydata>
