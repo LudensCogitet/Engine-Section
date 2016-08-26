@@ -5,7 +5,7 @@ S''
 p2
 sS'saveDestination'
 p3
-S'E:\\Documents\\repos\\Twine\\Engine Section\\Engine Section.tws'
+VE:\u005cDocuments\u005crepos\u005cTwine\u005cEngine Section\u005cEngine Section.tws
 p4
 sS'metadata'
 p5
@@ -27,7 +27,7 @@ I00
 sS'pos'
 p15
 (lp16
-I1830
+I1550
 aI150
 asS'passage'
 p17
@@ -306,7 +306,7 @@ Tiddler
 p104
 (dp105
 g21
-V<<Tick>>"We struck something. All aft sensors pertaining to the engine section have been unresponsive. But, the behavior of other parts of the ship are consistent with some kind of cooling problem.\u000a\u000aSo, I woke you up. I thought you'd be handy."\u000a\u000a[[--"Considering I'm the one with hands."--|Control Room]]
+V"We struck something. All aft sensors pertaining to the engine section have been unresponsive. But, the behavior of other parts of the ship are consistent with some kind of cooling problem.\u000a\u000aSo, I woke you up. I thought you'd be handy."\u000a\u000a[[--"Considering I'm the one with hands."--|Control Room]]
 p106
 sg23
 VStart6
@@ -315,12 +315,12 @@ sg25
 g26
 ((I2016
 I8
-I24
-I13
-I6
-I45
-I2
-I237
+I26
+I14
+I44
+I8
+I4
+I239
 I1
 tp108
 (dp109
@@ -519,7 +519,7 @@ tp167
 Rp168
 sbsa(dp169
 g14
-I01
+I00
 sg15
 (lp170
 I1260
@@ -530,7 +530,7 @@ Tiddler
 p171
 (dp172
 g21
-V<<Tick>><<if $panelFixed is false>>Usually you'd be seeing the status of every part of the engine section and its systems but, as Minerva said, something seems to be wrong with the sensors. The screen is dark.<<else>>The entire engine section glimmers on the screen in electric blue on black.<<if $lookedPanel is false>><<set $lookedPanel to true>> Looks like the sensors themselves were fine.\u000a\u000aYou brush aside your annoyance at the lack of redundant wiring for the sensors (even Minerva's awareness funneled through a single connector under the control panel!?) and turn your attention to the information on the screen.<<endif>>\u000a\u000a<<if $numProblems neq 0>><<print $numProblems>><<if $numProblems neq 3 && $numProblems neq 2>> blinking light indicates a problem:<<else>> blinking lights indicate problems:<<endif>><<endif>>\u000a<<if $hullBreached is true>>* There is a hull breach in section two of the engine tunnels.<<endif>>\u000a<<if $coolantWorking is false>>* There is indeed a breach in the coolant system. Looks like it's right by the intake in section three of the engine tunnels.<<endif>>\u000a<<if $quantumFieldCollapsed is false>>* Huh. [[TransSubAtPar][$transLast = "status screen"]] circuit 12 is in flux.<<endif>><<endif>><<if previous() is "TransSubAtPar">>\u000a[[--Back--|Control Room]]<<else>>\u000a[[--Back--|previous()]]<<endif>>
+V<<if $panelFixed is false>>Usually you'd be seeing the status of every part of the engine section and its systems but, as Minerva said, something seems to be wrong with the sensors. The screen is dark.<<else>>The entire engine section glimmers on the screen in electric blue on black.<<if $lookedPanel is false>><<set $lookedPanel to true>> Looks like the sensors themselves were fine.\u000a\u000aYou brush aside your annoyance at the lack of redundant wiring for the sensors (even Minerva's awareness funneled through a single connector under the control panel!?) and turn your attention to the information on the screen.<<endif>>\u000a\u000a<<if $numProblems neq 0>><<print $numProblems>><<if $numProblems neq 3 && $numProblems neq 2>> blinking light indicates a problem:<<else>> blinking lights indicate problems:<<endif>><<endif>>\u000a<<if $hullBreached is true>>* There is a hull breach in section two of the engine tunnels.<<endif>>\u000a<<if $coolantWorking is false>>* There is indeed a breach in the coolant system. Looks like it's right by the intake in section three of the engine tunnels.<<endif>>\u000a<<if $quantumFieldCollapsed is false>>* Huh. [[TransSubAtPar][$transLast = "status screen"]] circuit 12 is in flux.<<endif>><<endif>><<if previous() is "TransSubAtPar">>\u000a[[--Back--|Control Room]]<<else>>\u000a[[--Back--|previous()]]<<endif>>
 p173
 sg23
 Vstatus screen
@@ -539,12 +539,12 @@ sg25
 g26
 ((I2016
 I8
-I24
-I13
-I12
-I41
-I2
-I237
+I26
+I14
+I44
+I14
+I4
+I239
 I1
 tp175
 (dp176
@@ -673,7 +673,7 @@ Tiddler
 p215
 (dp216
 g21
-V<<Tick>><<if $numProblems is 0>>The ship is ship-shape again, and you can't wait to go back to hyper-sleep so you can wake up when the food synthesizers are booted up.\u000a[[Go to Hyper-sleep|ending][$endingText = "Now for a well earned rest in a giant bottle of saliferous goo kept at body temperature. Maybe, after the ship docks, you'll find another engineer who'll find your war story interesting."]]<<else>><<if $quantumFieldCollapsed is false && $numProblems is 1>>Well, the cooling problem seems to be fixed, but there's still something wrong with the sensors. Eh, you're so damn tired. It will probably be fine, and Minerva will wake you if there's another problem, right?\u000a[[Go to Hyper-sleep|ending][$endingText = "You head to the prepping chamber for hyper-sleep. You might get a reprimand at the other end for failing to fix the sensors, but this crate should make it fine, and they won't be able to deny that you kept the ship from blowing up."]]<<else>>Can't go back to sleep yet, 'still got problems to fix. Besides, it would be a short nap. If the Probability Field Flux Hyper Drive isn't being cooled, you estimate you've got something like <<print $time>> minutes before the whole thing explodes, leaving nothing but sub-atomic dust and tachyons hurtling through space-time.<<endif>><<endif>>\u000a[[--Back--|Control Room]]
+V<<if $numProblems is 0>>The ship is ship-shape again, and you can't wait to go back to hyper-sleep so you can wake up when the food synthesizers are booted up.\u000a[[Go to Hyper-sleep|ending][$endingText = "Now for a well earned rest in a giant bottle of saliferous goo kept at body temperature. Maybe, after the ship docks, you'll find another engineer who'll find your war story interesting."]]<<else>><<if $quantumFieldCollapsed is false && $numProblems is 1>>Well, the cooling problem seems to be fixed, but there's still something wrong with the sensors. Eh, you're so damn tired. It will probably be fine, and Minerva will wake you if there's another problem, right?\u000a[[Go to Hyper-sleep|ending][$endingText = "You head to the prepping chamber for hyper-sleep. You might get a reprimand at the other end for failing to fix the sensors, but this crate should make it fine, and they won't be able to deny that you kept the ship from blowing up."]]<<else>>Can't go back to sleep yet, 'still got problems to fix. Besides, it would be a short nap. If the Probability Field Flux Hyper Drive isn't being cooled, you estimate you've got something like <<print $time>> minutes before the whole thing explodes, leaving nothing but sub-atomic dust and tachyons hurtling through space-time.<<endif>><<endif>>\u000a[[--Back--|Control Room]]
 p217
 sg23
 VHyper-sleep pods
@@ -682,12 +682,12 @@ sg25
 g26
 ((I2016
 I8
-I24
-I13
-I16
-I58
-I2
-I237
+I26
+I14
+I44
+I23
+I4
+I239
 I1
 tp219
 (dp220
@@ -773,7 +773,7 @@ Tiddler
 p245
 (dp246
 g21
-V<<Tick>>You're standing in the engine section's control room.\u000a\u000aBefore you is the [[control panel]] and the [[status screen]].\u000a\u000aBeyond that is the hatchway to the [[Hyper-sleep pods]].\u000a\u000aA storage closet is through the [[door|storage closet]] to your left.\u000a\u000aA [[ladder|Heisenberg Shaft]] on your right leads up to the Heisenberg shaft.\u000a\u000aAnother [[ladder|Engine Tunnels]] behind you leads down to the Engine Tunnels.\u000a\u000a<<TextInput "_Control Room">>
+VYou're standing in the engine section's control room.\u000a\u000aBefore you is the [[control panel]] and the [[status screen]].\u000a\u000aBeyond that is the hatchway to the [[Hyper-sleep pods]].\u000a\u000aA storage closet is through the [[door|storage closet]] to your left.\u000a\u000aA [[ladder|Heisenberg Shaft]] on your right leads up to the Heisenberg shaft.\u000a\u000aAnother [[ladder|Engine Tunnels]] behind you leads down to the Engine Tunnels.\u000a\u000a<<TextInput "_Control Room">>
 p247
 sg23
 VControl Room
@@ -782,12 +782,12 @@ sg25
 g26
 ((I2016
 I8
-I24
-I13
-I51
-I32
-I2
-I237
+I26
+I14
+I44
+I39
+I4
+I239
 I1
 tp249
 (dp250
@@ -1044,7 +1044,7 @@ Tiddler
 p328
 (dp329
 g21
-V<<Tick>><<set $randTunnel to either("Four","Five","Nine","Twelve")>>You pick a direction, head down the corridor, round a corner and...\u000a\u000aYou're in section <<print $randTunnel>>. It looks pretty much like any other section of the engine tunnels, except for the big "<<print $randTunnel>>" printed on one of the few lengths of wall not covered in wiring and pipes.\u000a[[--Take a guess--|_Engine Tunnels][$input = "take a guess"]]\u000a<<TextInput "_random tunnel">>
+V<<set $randTunnel to either("Four","Five","Nine","Twelve")>>You pick a direction, head down the corridor, round a corner and...\u000a\u000aYou're in section <<print $randTunnel>>. It looks pretty much like any other section of the engine tunnels, except for the big "<<print $randTunnel>>" printed on one of the few lengths of wall not covered in wiring and pipes.\u000a[[--Take a guess--|_Engine Tunnels][$input = "take a guess"]]\u000a<<TextInput "_random tunnel">>
 p330
 sg23
 Vrandom tunnel
@@ -1053,12 +1053,12 @@ sg25
 g26
 ((I2016
 I8
-I24
-I13
-I57
-I7
-I2
-I237
+I26
+I14
+I44
+I51
+I4
+I239
 I1
 tp332
 (dp333
@@ -1250,7 +1250,7 @@ tp390
 Rp391
 sbsa(dp392
 g14
-I00
+I01
 sg15
 (lp393
 I150
@@ -1348,7 +1348,7 @@ Tiddler
 p420
 (dp421
 g21
-V<<Tick>><<if $hatchesClosed is true>><<Tick>>The emergency bulkheads have been engaged. You can't get up to the Heisenberg shaft.<<else>>The Heisenberg shaft is a hollow tube 2.5 meters in diameter and 8 meters tall. \u000aA dazzling display of colors and shapes play across the smooth, semi-translucent wall of the shaft. The ladder you climbed to get here continues up to the ceiling, where two rows of panels, numbered 1 through 16, are built into the wall.\u000a[[--Climb up--|Heisenberg Shaft Top]]<<endif>>\u000a<<TextInput "_Heisenberg Shaft">>\u000a[[--Back--|Control Room]]
+V<<if $hatchesClosed is true>><<Tick>>The emergency bulkheads have been engaged. You can't get up to the Heisenberg shaft.<<else>>The Heisenberg shaft is a hollow tube 2.5 meters in diameter and 8 meters tall. \u000aA dazzling display of colors and shapes play across the smooth, semi-translucent wall of the shaft. The ladder you climbed to get here continues up to the ceiling, where two rows of panels, numbered 1 through 16, are built into the wall.\u000a[[--Climb up--|Heisenberg Shaft Top]]<<endif>>\u000a<<TextInput "_Heisenberg Shaft">>\u000a[[--Back--|Control Room]]
 p422
 sg23
 VHeisenberg Shaft
@@ -1357,12 +1357,12 @@ sg25
 g26
 ((I2016
 I8
-I24
+I26
 I14
+I45
+I18
 I4
-I5
-I2
-I237
+I239
 I1
 tp424
 (dp425
@@ -1400,7 +1400,7 @@ Tiddler
 p436
 (dp437
 g21
-V<<Tick>>"Section 3" say the white letters painted on the steel wall.<<if $coolantWorking is false>> There's a puddle of iridescent yellow liquid on the floor at your feet; the coolant that leaked before the emergency cut-off sealed the intake pipes. You can see the acorn sized hole in the intake that caused it.<<if $havePatches is true>>\u000a[[--Use the Auto-Adhering Auto-adaptive All-Purpose Patches to patch the coolant intake pipe--|_Engine Tunnels][$input = "blarg"]]<<endif>><<endif>><<if $quantumFieldCollapsed is false>>\u000a[[--Take a guess--|_Engine Tunnels][$input = "take a guess"]]\u000a<<else>>\u000a[[--Head to section two|section 2]]\u000a[[--Head back to the ladder--|Engine Tunnels Again]]<<endif>>\u000a<<TextInput "_section 3">>
+V"Section 3" say the white letters painted on the steel wall.<<if $coolantWorking is false>> There's a puddle of iridescent yellow liquid on the floor at your feet; the coolant that leaked before the emergency cut-off sealed the intake pipes. You can see the acorn sized hole in the intake that caused it.<<if $havePatches is true>>\u000a[[--Use the Auto-Adhering Auto-adaptive All-Purpose Patches to patch the coolant intake pipe--|_Engine Tunnels][$input = "blarg"]]<<endif>><<endif>><<if $quantumFieldCollapsed is false>>\u000a[[--Take a guess--|_Engine Tunnels][$input = "take a guess"]]\u000a<<else>>\u000a[[--Head to section two|section 2]]\u000a[[--Head back to the ladder--|Engine Tunnels Again]]<<endif>>\u000a<<TextInput "_section 3">>
 p438
 sg23
 Vsection 3
@@ -1409,12 +1409,12 @@ sg25
 g26
 ((I2016
 I8
-I24
+I26
 I14
-I37
-I54
-I2
-I237
+I45
+I14
+I4
+I239
 I1
 tp440
 (dp441
@@ -1489,7 +1489,7 @@ Tiddler
 p463
 (dp464
 g21
-V<<Tick>>Here you are in section two. \u000a<<if $hullBreached is true>>Your eyes are drawn to the immensity of deep space with a terrifying immediacy, as a breach in the hull gapes on your right.\u000aThere's nothing there between you and a whole lot of nothing.\u000a<<if $havePatches is true>>[[--Use the Auto-Adhering Auto-Adaptive All-Purpose Patches to patch the hull breach|_Engine Tunnels][$input = "harg"]]<<endif>><<else>>The patch is holding nicely.<<endif>>\u000a<<if $quantumFieldCollapsed is false>>[[--Take a guess--|_Engine Tunnels][$input = "take a guess"]]<<else>>[[--Move on to section three|section 3]]\u000a[[--Head back to the ladder--|Engine Tunnels Again]]<<endif>>\u000a<<TextInput "_section 2">>
+VHere you are in section two. \u000a<<if $hullBreached is true>>Your eyes are drawn to the immensity of deep space with a terrifying immediacy, as a breach in the hull gapes on your right.\u000aThere's nothing there between you and a whole lot of nothing.\u000a<<if $havePatches is true>>[[--Use the Auto-Adhering Auto-Adaptive All-Purpose Patches to patch the hull breach|_Engine Tunnels][$input = "harg"]]<<endif>><<else>>The patch is holding nicely.<<endif>>\u000a<<if $quantumFieldCollapsed is false>>[[--Take a guess--|_Engine Tunnels][$input = "take a guess"]]<<else>>[[--Move on to section three|section 3]]\u000a[[--Head back to the ladder--|Engine Tunnels Again]]<<endif>>\u000a<<TextInput "_section 2">>
 p465
 sg23
 Vsection 2
@@ -1498,12 +1498,12 @@ sg25
 g26
 ((I2016
 I8
-I24
+I26
 I14
-I7
-I5
-I2
-I237
+I45
+I10
+I4
+I239
 I1
 tp467
 (dp468
@@ -1699,14 +1699,14 @@ I00
 sg15
 (lp528
 I1690
-aI280
+aI290
 asg17
 (itiddlywiki
 Tiddler
 p529
 (dp530
 g21
-V<<Tick>>You're standing in the engine section's storage closet.\u000a\u000aIt's really not much to look at, but it's difficult to spend so much time in places like this without feeling a little affection for them. The walls are lined with shelves covered in parts, tools, and do-dads\u000a\u000a<<if $haveScrewdriver is false>>A [[screwdriver|GetScrewdriver][$haveScrewdriver to true]] lies on a shelf nearby.<<endif>>\u000a<<if $haveSpacesuit is false>>There's a [[space suit|GetSpacesuit]] hanging in the corner.<<endif>>\u000a<<if $havePatches is false>>Some [[Auto-Adhering Auto-Adaptive All-Purpose Patches|GetPatches][$havePatches to true]] are on the floor against one wall.<<endif>>\u000a\u000a[[--Back--|Control Room]]
+VYou're standing in the engine section's storage closet.\u000a\u000aIt's really not much to look at, but it's difficult to spend so much time in places like this without feeling a little affection for them. The walls are lined with shelves covered in parts, tools, and do-dads\u000a\u000a<<if $haveScrewdriver is false>>A [[screwdriver|GetScrewdriver][$haveScrewdriver to true]] lies on a shelf nearby.<<endif>>\u000a<<if $haveSpacesuit is false>>There's a [[space suit|GetSpacesuit]] hanging in the corner.<<endif>>\u000a<<if $havePatches is false>>Some [[Auto-Adhering Auto-Adaptive All-Purpose Patches|GetPatches][$havePatches to true]] are on the floor against one wall.<<endif>>\u000a\u000a[[--Back--|Control Room]]
 p531
 sg23
 Vstorage closet
@@ -1715,12 +1715,12 @@ sg25
 g26
 ((I2016
 I8
-I24
+I26
 I14
-I20
-I40
+I45
 I2
-I237
+I4
+I239
 I1
 tp533
 (dp534
@@ -1923,7 +1923,7 @@ Tiddler
 p595
 (dp596
 g21
-V<<Tick>>This panel covers a complex spider's web of circuits and wires and is covered with a dazzling array of dials, switches, nobs, and a track ball (believe it or not). All of which, as Chief Engineer, you understand completely.\u000a\u000a<<if $hatchesClosed is true>>[[--Disengage Emergency Bulkheads--|ToggleHatches]]<<endif>>\u000a<<if $hatchesClosed is false>>[[--Engage Emergency Bulkheads--|ToggleHatches]]<<endif>>\u000a\u000a<<TextInput "_control panel">>\u000a\u000a[[--Back--|Control Room]]
+VThis panel covers a complex spider's web of circuits and wires and is covered with a dazzling array of dials, switches, nobs, and a track ball (believe it or not). All of which, as Chief Engineer, you understand completely.\u000a\u000a<<if $hatchesClosed is true>>[[--Disengage Emergency Bulkheads--|ToggleHatches]]<<endif>>\u000a<<if $hatchesClosed is false>>[[--Engage Emergency Bulkheads--|ToggleHatches]]<<endif>>\u000a\u000a<<TextInput "_control panel">>\u000a\u000a[[--Back--|Control Room]]
 p597
 sg23
 Vcontrol panel
@@ -1932,12 +1932,12 @@ sg25
 g26
 ((I2016
 I8
-I24
+I26
 I14
-I22
-I18
-I2
-I237
+I45
+I28
+I4
+I239
 I1
 tp599
 (dp600
@@ -2049,7 +2049,7 @@ Tiddler
 p633
 (dp634
 g21
-V<<Tick>>You're at the bottom of the ladder back up to the control room. <<if $quantumFieldCollapsed is true>>\u000aFrom the digital readout on the wall you see that [[section two|section 2]] is straight ahead at the moment. [[Section three|section 3]] is to the right.<<else>>\u000aThe digital readouts at each tunnel entrance are dark. This is a [[problem|TransSubAtPar][$transLast ="Engine Tunnels Again"]].\u000a[[--Take a guess--|_Engine Tunnels][$input = "take a guess"]]<<endif>>\u000a\u000a<<TextInput "_Engine Tunnels">>\u000a[[--Back up to the control room--|Control Room]]
+VYou're at the bottom of the ladder back up to the control room. <<if $quantumFieldCollapsed is true>>\u000aFrom the digital readout on the wall you see that [[section two|section 2]] is straight ahead at the moment. [[Section three|section 3]] is to the right.<<else>>\u000aThe digital readouts at each tunnel entrance are dark. This is a [[problem|TransSubAtPar][$transLast ="Engine Tunnels Again"]].\u000a[[--Take a guess--|_Engine Tunnels][$input = "take a guess"]]<<endif>>\u000a\u000a<<TextInput "_Engine Tunnels">>\u000a[[--Back up to the control room--|Control Room]]
 p635
 sg23
 VEngine Tunnels Again
@@ -2058,12 +2058,12 @@ sg25
 g26
 ((I2016
 I8
-I24
+I26
 I14
-I33
-I12
-I2
-I237
+I45
+I36
+I4
+I239
 I1
 tp637
 (dp638
