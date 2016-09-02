@@ -5,7 +5,7 @@ S''
 p2
 sS'saveDestination'
 p3
-S'E:\\Documents\\repos\\Twine\\Engine-Section\\Engine Section.tws'
+VC:\u005cUsers\u005cjrwen\u005cDocuments\u005cRepos\u005cEngine-Section\u005cEngine Section.tws
 p4
 sS'metadata'
 p5
@@ -82,7 +82,7 @@ tp36
 Rp37
 sbsa(dp38
 g14
-I00
+I01
 sg15
 (lp39
 F850.0
@@ -101,13 +101,13 @@ p43
 sg25
 g26
 ((I2016
-I8
-I24
-I13
-I5
-I23
+I9
 I2
-I237
+I0
+I4
+I45
+I4
+I246
 I1
 tp44
 (dp45
@@ -1183,7 +1183,7 @@ tp369
 Rp370
 sbsa(dp371
 g14
-I01
+I00
 sg15
 (lp372
 F2250.0
@@ -1783,18 +1783,18 @@ g21
 V/* Your story will use the CSS in this passage to style the page.\u000aGive this passage more tags, and it will only affect passages with those tags.\u000aExample selectors: */\u000a\u000abody {\u000a	/* This affects the entire page */\u000a	\u000a	\u000a}\u000a.passage {\u000a	/* This only affects passages */\u000a	\u000a	\u000a}\u000a.passage .hidden-link a.internalLink{\u000a	cursor: text;\u000a    color: inherit;\u000a	text-decoration: inherit;\u000a	font-weight: inherit;\u000a}\u000a.passage .hidden-link a:hover.internalLink{\u000a	cursor: text;\u000a	color: inherit;\u000a	text-decoration: inherit;\u000a	font-weight: inherit;\u000a}
 p553
 sg23
-VUntitled Stylesheet 1
+VLink Mods
 p554
 sg25
 g26
 ((I2016
-I8
-I26
+I9
+I1
 I18
-I17
-I17
-I4
-I239
+I24
+I8
+I3
+I245
 I1
 tp555
 (dp556
@@ -1832,7 +1832,7 @@ Tiddler
 p567
 (dp568
 g21
-V$('html').click(function(){\u000a	var time = state.history[0].variables.time++;\u000a\u000a	if(time === state.history[0].variables.endTime){\u000a		state.display('Ka-boom');\u000a	}\u000a});
+V$('div').click(function(){\u000a	var time = state.history[0].variables.time++;\u000a\u000a	if(time === state.history[0].variables.endTime){\u000a		state.display('Ka-boom');\u000a	}\u000a});
 p569
 sg23
 VClickTicker
@@ -1840,13 +1840,13 @@ p570
 sg25
 g26
 ((I2016
-I8
-I26
-I18
-I31
-I12
+I9
+I2
+I0
+I2
+I11
 I4
-I239
+I246
 I1
 tp571
 (dp572
